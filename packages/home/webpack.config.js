@@ -1,19 +1,18 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const ModuleFederationPlugin = require("webpack/lib/container/moduleFederationPlugin");
 
 module.exports = {
-  entry: ".src/index.js",
+  entry: "./src/index.js",
+  mode: 'development',
   output: {
     filename: "[name].js",
     path: path.resolve(__dirname, "./dist"),
-    publicPath: "http://localhost:9001/",
+    publicPath: "http://localhost:9002/",
   },
   devServer: {
-    contentBase: path.resolve(__dirname, "./dist"),
-    index: "index.html",
-    port: 9001,
-    historyFallbackApi: true,
+    static: path.resolve(__dirname, "./dist"),
+    port: 9002,
+    historyApiFallback: true, 
   },
   resolve: {
     extensions: [".jsx", ".js", ".json"],
@@ -24,7 +23,7 @@ module.exports = {
         test: /\.jsx?$/,
         loader: require.resolve("babel-loader"),
         options: {
-          preset: [require.resolve("@babel/preset-react")],
+          presets: [require.resolve("@babel/preset-react")],
         },
       },
       {
