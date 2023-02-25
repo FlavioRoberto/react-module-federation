@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "server": "webpack serve --hot",
+    "start": "npm run build && npm run server"
   },
   "keywords": [],
   "author": "",
@@ -16,7 +19,7 @@
     "bootstrap": "^5.2.3",
     "css-loader": "^6.7.3",
     "html-webpack-plugin": "^5.5.0",
-    "reac": "0.0.0",
+    "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router": "^6.8.1",
     "react-router-dom": "^6.8.1",
