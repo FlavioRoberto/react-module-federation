@@ -13,7 +13,7 @@ const Contact = () => {
           </CardTitle>
 
           <CardText>
-            <Button color="primary">Click at me</Button>
+            Hello contact
           </CardText>
         </CardBody>
       </Card>

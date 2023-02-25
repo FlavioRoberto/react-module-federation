@@ -13,7 +13,7 @@ const Home = () => {
           </CardTitle>
 
           <CardText>
-            <Button color="primary">Click at me</Button>
+            Hello Home
           </CardText>
         </CardBody>
       </Card>
